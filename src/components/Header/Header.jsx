@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import { Menu } from "../Menu/Menu";
 
-export default function Header() {
+export const Header = () => {
   return (
-    <div>Header</div>
-  )
-}
+    <div>
+      <Menu />
+    </div>
+  );
+};
