@@ -23,6 +23,7 @@ export const Wrapper = styled.div`
 export const TextTop = styled.p`
   font-size: 32px;
   color: var(--primeryWhite);
+  text-shadow: var(--textShadow);
   margin-top: 160px;
   margin-left: auto;
   margin-right: auto;
@@ -31,6 +32,7 @@ export const TextTop = styled.p`
 export const TextBot = styled.p`
   font-size: 32px;
   color: var(--primeryWhite);
+  text-shadow: var(--textShadow);
   margin-left: auto;
   margin-right: auto;
 `;
@@ -41,6 +43,7 @@ export const Title = styled.h1`
   font-style: normal;
   font-weight: 600;
   color: var(--primeryWhite);
+  text-shadow: var(--textShadow);
   text-align: center;
   margin-left: auto;
   margin-right: auto;
