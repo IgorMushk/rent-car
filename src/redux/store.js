@@ -8,7 +8,7 @@ import { persistStore, persistReducer,
   REGISTER, } from 'redux-persist'
 import storage from 'redux-persist/lib/storage' 
 import { advertsReducer } from "./advertsSlice";
-import { filterReducer } from "./filterSlice";
+import { filterReducer } from "./filtersSlice";
 
 const favoritesPersistConfig = {
   key: 'adverts',

@@ -12,6 +12,14 @@
   0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   --backgroundColorHeader: rgba(52, 112, 255, 0.3);
   --textShadow: rgb(0, 0, 0, 0.8) 2px 2px 4px;
+  --colorLabel: #8a8a89;
+  --colorBackgroundSelector: #f7f7fb;
+  --colorBorderInput: 1px solid rgba(138, 138, 137, 0.20);
+  --colorNotActivSelector: rgba(18, 20, 23, 0.2);
+  --colorBorderDropdown: 1px solid rgba(18, 20, 23, 0.05);
+  --colorShadowBorderDropdown: 0px 4px 36px 0px rgba(0, 0, 0, 0.02);
+  --colorDropdown: rgba(18, 20, 23, 0.2);
+  --colorBackScroollDropdown: rgba(18, 20, 23, 0.05);
 }
 
 main {

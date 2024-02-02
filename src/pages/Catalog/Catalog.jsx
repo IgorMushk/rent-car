@@ -1,10 +1,13 @@
-import React from 'react'
+import React from "react";
+import { Filters } from "../../components/Filters/Filters";
+import { CatalogList } from "../../components/Catalog/CatalogList";
+import { WrapperList } from "./Catalog.styled";
 
 export const Catalog = () => {
   return (
-    <>
-    <div>Filters</div>
-    <div>Catalog</div>
-    </>
-  )
-}
+    <WrapperList>
+      <Filters />
+      <CatalogList />
+    </WrapperList>
+  );
+};
