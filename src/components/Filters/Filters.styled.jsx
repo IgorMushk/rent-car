@@ -4,6 +4,7 @@ import { ReactComponent as Arrow } from "../../icons/arrow.svg";
 export const Form = styled.form`
   margin-bottom: 50px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 18px;
 `;
@@ -102,11 +103,22 @@ export const InputContainer = styled.div`
   flex-direction: column;
 `;
 
+export const ErrorMessage = styled.p`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(100%);
+  font-size: 12px;
+  color: red;
+`;
+
 export const Btn = styled.button`
   display: flex;
   padding: 14px 44px;
   justify-content: center;
   align-items: center;
+  width: 136px;
   border: none;
   border-radius: 12px;
   margin-top: 28px;
@@ -122,12 +134,3 @@ export const Btn = styled.button`
   }
 `;
 
-export const ErrorMessage = styled.p`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  transform: translateY(100%);
-  font-size: 12px;
-  color: red;
-`;

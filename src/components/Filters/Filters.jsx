@@ -33,6 +33,7 @@ export const Filters = () => {
   const [mileageFromInput, setMileageFrom] = useState(mileageFrom);
   const [mileageToInput, setMileageTo] = useState(mileageTo);
   const [isValid, setIsValid] = useState(true);
+  const [messageError, setMessageError] = useState('');
 
   const [isBrandDropdownOpen, setIsBrandDropdownOpen] = useState(false);
   const [isPriceDropdownOpen, setIsPriceDropdownOpen] = useState(false);
@@ -50,11 +51,11 @@ export const Filters = () => {
     return formattedValue;
   };
 
-  const handleMinInputChange = (e) => {
+  const handleInputFrom = (e) => {
     setMileageFrom(e.target.value);
   };
 
-  const handleMaxInputChange = (e) => {
+  const handleInputTo = (e) => {
     setMileageTo(e.target.value);
   };
 
@@ -77,8 +78,15 @@ export const Filters = () => {
   }, [dispatch, searchParams]);
 
   useEffect(() => {
+    if (isNaN(mileageFromInput) && isNaN(mileageToInput) &&
+    (mileageFromInput.length + mileageToInput.length) > 0 ) {
+        console.log(mileageFromInput, mileageToInput);
+        setMessageError("Need to enter numbers.");
+        return setIsValid(false);
+    }
     if (mileageFromInput && mileageToInput && parseInt(mileageFromInput) > parseInt(mileageToInput)) {
       setIsValid(false);
+      setMessageError("Error range: 'To' mast be equal to or greater than 'From'.");
     } else {
       setIsValid(true);
     }
@@ -174,7 +182,7 @@ export const Filters = () => {
               name="minMileage"
               id="minMileage"
               value={formatMileage(mileageFromInput || "")}
-              onChange={handleMinInputChange}
+              onChange={handleInputFrom}
               $side="left"
             />
           </FormItemWrapper>
@@ -185,12 +193,12 @@ export const Filters = () => {
               name="maxMileage"
               id="maxMileage"
               value={formatMileage(mileageToInput || "")}
-              onChange={handleMaxInputChange}
+              onChange={handleInputTo}
               $side="right"
             />
           </FormItemWrapper>
         </FromToContainer>
-        {!isValid && <ErrorMessage>Error range: 'To' mast be equal to or greater than 'From'.</ErrorMessage>}
+        {!isValid && <ErrorMessage>`{messageError}`</ErrorMessage>}
       </InputContainer>
       <Btn disabled={!isValid}>Search</Btn>
     </Form>
