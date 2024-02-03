@@ -13,7 +13,7 @@ export const ModalDropdown = styled.div`
   border: var(--colorBorderDropdown);
   border-radius: 14px;
   background-color: var(--primeryWhite);
-  box-shadow: --colorShadowBorderDropdown;
+  box-shadow: var(--colorShadowBorderDropdown);
   color: var(--colorDropdown);
   font-size: 16px;
   font-weight: 500;
