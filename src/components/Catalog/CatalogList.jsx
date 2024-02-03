@@ -5,6 +5,7 @@ import { fetchPage, getByFilter } from "../../redux/operations";
 import { selectAdverts } from "../../redux/selectors";
 import { WrapperList } from "./CatalogList.styled";
 import { LoadMore } from "./CatalogList.styled";
+import { LIMIT } from "../../helpers/constats";
 
 export const CatalogList = () => {
   const dispatch = useDispatch();
@@ -13,8 +14,6 @@ export const CatalogList = () => {
   const [isLastPage, setLastPage] = useState(false);
   const [searchParams] = useSearchParams();
   const controllerRef = useRef();
-
-  const LIMIT = 12;
 
   useEffect(() => {
     if (searchParams.size === 0) {
@@ -40,8 +39,9 @@ export const CatalogList = () => {
 
   useEffect(() => {
     if (adverts.length % LIMIT !== 0) {
-      setLastPage(true);
-    }
+      setLastPage(true)
+      ;
+    } else {setLastPage(false)}
   }, [adverts]);
 
   const handleClickLoadMore = (e) => {      
