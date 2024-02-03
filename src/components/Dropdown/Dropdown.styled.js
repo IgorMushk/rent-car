@@ -18,6 +18,7 @@ export const ModalDropdown = styled.div`
   font-size: 16px;
   font-weight: 500;
   line-height: 1.25;
+  text-align: left;
 
   &::-webkit-scrollbar {
     width: 8px;
