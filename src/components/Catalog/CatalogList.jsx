@@ -30,6 +30,7 @@ export const CatalogList = () => {
 
     searchParams.forEach((value, key) => (filters[key] = value));
 
+    console.log(filters);
     dispatch(getByFilter(filters));
     setLastPage(true);
     return () => {

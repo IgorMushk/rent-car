@@ -14,9 +14,9 @@ export const fetchPage = createAsyncThunk("cars/fetchPage", async ({ page, limit
 
 export const getByFilter = createAsyncThunk(
   "cars/getByFilter",
-  async ({ makeCar, price, mileageFrom, mileageTo, page = 1, limit = 12 }, thunkAPI) => {
+  async ({ brand, price, mileageFrom, mileageTo, page = 1, limit = 12 }, thunkAPI) => {
     try {
-      const { data } = await axios.get(`${BASE_URL}/cars?make=${makeCar}&page=${page}&limit=${limit}`);
+      const { data } = await axios.get(`${BASE_URL}/cars?make=${brand}&page=${page}&limit=${limit}`);
       const result = data.filter(({ rentalPrice, mileage }) => {
         return (
           (!price || parseInt(rentalPrice.slice(1)) <= parseInt(price)) &&
