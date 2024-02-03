@@ -139,7 +139,7 @@ export const Filters = () => {
         <Label>Price/ 1 hour</Label>
         <SelectorWrapper>
           <Selector onClick={() => setIsPriceDropdownOpen(!isPriceDropdownOpen)} width="125px">
-            {`${priceSelect ? priceSelect : "To"} $`}
+            {`${priceSelect ? "To "+priceSelect : "To"}$`}
           </Selector>
           <CustomArrow $isOpen={isPriceDropdownOpen} />
           {isPriceDropdownOpen && (
