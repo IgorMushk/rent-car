@@ -1,15 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ModalDropdown = styled.div`
   position: absolute;
   z-index: 100;
+  padding: 14px 8px 4px 18px;
   top: calc(100% + 4px);
   left: 0;
   width: 80%;
   max-height: 272px;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  padding: 14px 8px 4px 18px;
   border: var(--colorBorderDropdown);
   border-radius: 14px;
   background-color: var(--primeryWhite);
@@ -19,6 +18,7 @@ export const ModalDropdown = styled.div`
   font-weight: 500;
   line-height: 1.25;
   text-align: left;
+  -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar {
     width: 8px;

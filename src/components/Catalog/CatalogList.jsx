@@ -6,6 +6,7 @@ import { selectAdverts } from "../../redux/selectors";
 import { WrapperList } from "./CatalogList.styled";
 import { LoadMore } from "./CatalogList.styled";
 import { LIMIT } from "../../helpers/constats";
+import { CarCard } from "../CarCard/CarCard";
 
 export const CatalogList = () => {
   const dispatch = useDispatch();
@@ -52,8 +53,7 @@ export const CatalogList = () => {
     <>
       <WrapperList>
         {adverts.map((item) => (
-          // <CarCard key={item.id} item={item} />
-          <div> {item.id} </div>
+          <CarCard key={item.id} item={item} />
         ))}
       </WrapperList>
       {!isLastPage && (

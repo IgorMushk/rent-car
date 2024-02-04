@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-
 import { ModalDropdown } from "./Dropdown.styled";
 
 export const Dropdown = ({ close, children }) => {
@@ -9,9 +8,7 @@ export const Dropdown = ({ close, children }) => {
         close();
       }
     };
-
     document.addEventListener("keydown", closeDropdownEsc);
-
     return () => {
       document.removeEventListener("keydown", closeDropdownEsc);
     };
