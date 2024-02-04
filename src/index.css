@@ -21,8 +21,8 @@
   --colorDropdown: rgba(18, 20, 23, 0.2);
   --colorBackScroollDropdown: rgba(18, 20, 23, 0.05);
   --colorAddTextCarCart: rgba(18, 20, 23, 0.5);
-  --colorBackgaundAddTextCarCart: rgba(18, 20, 23, 0.1)
-
+  --colorBackgaundAddTextCarCart: rgba(18, 20, 23, 0.1);
+  --colorWrapperLoader: rgba(18, 20, 23, 0.4)
 }
 
 main {
