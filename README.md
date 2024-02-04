@@ -38,17 +38,14 @@ This website is built on the React framework, your automobile companion provides
 ```
 git clone https://github.com/IgorMushk/rent-car.git
 ```
-
 2. Navigate to the project directory:
 ```
-cd cars-ukraine
+cd rent-car
 ```
-
 3. Install dependencies:
 ```
 npm install
 ```
-
 4. Run the application:
 ```
 npm start
