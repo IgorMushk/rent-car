@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
+import { FavoriteList } from "../../components/Favorite/FavoriteList";
+import { WrapperList } from "../Catalog/Catalog.styled";
 
 export const Favorites = () => {
   return (
-    <div>Favorites</div>
-  )
-}
+    <WrapperList>
+      <FavoriteList />
+    </WrapperList>
+  );
+};

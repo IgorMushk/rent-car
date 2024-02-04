@@ -3,6 +3,7 @@ import { styled } from 'styled-components';
 export const LoadMore = styled.a`
   display: block;
   margin: 100px auto 0;
+  margin-bottom: 50px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -20,6 +21,7 @@ export const LoadMore = styled.a`
 export const WrapperList = styled.div`
   display: grid;
   justify-content: center;
+  margin-bottom: 20px;
 
   grid-template-columns: repeat(1, 274px);
   gap: 50px 29px;
