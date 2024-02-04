@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rent-car/static/css/main.dd127e60.css",
-    "main.js": "/rent-car/static/js/main.76a4a970.js",
+    "main.css": "/rent-car/static/css/main.34e0285f.css",
+    "main.js": "/rent-car/static/js/main.0be75211.js",
     "static/media/bg_home.webp": "/rent-car/static/media/bg_home.e90b1c1c652b61316df6.webp",
     "static/media/car-placeholder.png": "/rent-car/static/media/car-placeholder.a704c55bbe716b0906e3.png",
     "static/media/car-placeholder.jpg": "/rent-car/static/media/car-placeholder.8bd800ec1ac74872cd08.jpg",
@@ -9,11 +9,11 @@
     "static/media/heart-active.svg": "/rent-car/static/media/heart-active.97847e9195943f61800c97807e735d4f.svg",
     "index.html": "/rent-car/index.html",
     "static/media/chevron-down.svg": "/rent-car/static/media/chevron-down.24cd320d509ea2ebbeb4265f8030bafb.svg",
-    "main.dd127e60.css.map": "/rent-car/static/css/main.dd127e60.css.map",
-    "main.76a4a970.js.map": "/rent-car/static/js/main.76a4a970.js.map"
+    "main.34e0285f.css.map": "/rent-car/static/css/main.34e0285f.css.map",
+    "main.0be75211.js.map": "/rent-car/static/js/main.0be75211.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd127e60.css",
-    "static/js/main.76a4a970.js"
+    "static/css/main.34e0285f.css",
+    "static/js/main.0be75211.js"
   ]
 }
