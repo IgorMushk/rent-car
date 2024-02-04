@@ -1,6 +1,5 @@
-//import { useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
 import { selectFavorites } from "../../redux/selectors";
 import { addFavorites, removeFavorites } from "../../redux/advertsSlice";
 import { ReactComponent as FavoriteNormal } from "../../icons/heart-normal.svg";
@@ -20,6 +19,7 @@ import {
   TextBlock,
   TextItem,
 } from "./CarCard.styled";
+import BaseModal from "../Modal/BaseModal";
 
 export const CarCard = ({ item }) => {
   const favorites = useSelector(selectFavorites);
@@ -33,7 +33,6 @@ export const CarCard = ({ item }) => {
     type,
     img,
     accessories,
-    //functionalities,
     rentalPrice,
     rentalCompany,
     address,
@@ -42,6 +41,14 @@ export const CarCard = ({ item }) => {
   const arrAdress = address.split(",");
   const city = arrAdress[1];
   const country = arrAdress[2];
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   const isFavorite = (id) => {
     return favorites.some((item) => item.id === id);
@@ -96,8 +103,9 @@ export const CarCard = ({ item }) => {
           <TextItem>{mileage}</TextItem>
           <TextItem>{accessories[0]}</TextItem>
         </TextBlock>
-        <Button >Learn more</Button>
+        <Button onClick={openModal}>Learn more</Button>
       </div>
+      {isModalOpen && <BaseModal open={isModalOpen} onClose={closeModal} data={item} ></BaseModal>}
     </WrapperCard>
   );
 };

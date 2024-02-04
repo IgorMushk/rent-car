@@ -9,11 +9,7 @@ export const FavoriteList = () => {
     const adverts = useSelector(selectFavorites)
   return (
     <div>
-        {/* {adverts.map((item) => (
-          <CarCard key={item.id} item={item} />
-        ))} */}
-        {adverts.length > 0 ? 
-        
+        {adverts.length > 0 ?        
         <WrapperList>
         {adverts.map((item) => (
           <CarCard key={item.id} item={item} />
